@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow-x: hidden;
+}
+
+.button{
+    height: 50px;
+    width: 50px;
+
+    background-color: #ffc400;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 2%;
+    right: 2%;
+
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(22, 22, 22, 0.562);
+    z-index: 10;
+}
+
+.button:hover{
+    background-color: #ff9900;
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+.word-panel{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(129, 129, 129);
+    width: 20%;
+    height: 100%;
+    gap: 2rem 0;
+
+    position: absolute;
+    right: 0;
+    z-index: 5;
+
+    transform: translateX(100%);
+    overflow-y: scroll;
+}
+
+.box{
+    height: 200px;
+    width: 250px;
+    border-radius: 15px;
+    background-color: rgb(11, 0, 37);
+    color: whitesmoke;
+    box-shadow: 0px 0px 10px rgba(22, 22, 22, 0.562);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.open{
+    transform: translate(0);
+    transition: 0.2s ease-out
+}
+
+.cards-container{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.zob{
+    height: 300px;
+    width: 200px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.zob:hover{
+    cursor: pointer;
+}
+
+.rotate .card{
+    transform: rotateY(-180deg);
+}
+
+.card{
+  
+    height: 100%;
+    width: 100%;
+
+    background-color: rgb(11, 0, 37);
+    color: whitesmoke;
+    border-radius: 15px;
+
+    font-size: 2rem;
+    transition: 0.8s ease-in-out;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+.front, .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    backface-visibility: hidden;
+}
+
+.front{
+    transform: rotateY(180deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text-container{
+    height: 10%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.id{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+
+    font-size: 0.8rem;
+}
+
+.hiragana{
+    font-size: 0.8rem;
+}
+
+.kanji{
+    font-size: 1.5rem;
+}
+
+.fr{
+    font-size: 1rem;
+}
+
